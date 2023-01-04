@@ -12,7 +12,7 @@ module.exports = function toReadable (number) {
     return fromTenToNineteen[num % 10]
   } else if (num >19 && num < 100) {
     return dozens[Math.floor(num/10)] + ' ' + units[num%10]
-  } else if (num >99 && num < 1000) {
+  } else if (num > 100 && num < 1000) {
     let firstNumber = units[Math.floor(num/100)]
     let endTheNumber = Math.floor(num%100)
     return firstNumber + ' hundred ' + toReadable(endTheNumber)
