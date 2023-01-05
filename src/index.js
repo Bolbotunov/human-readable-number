@@ -12,7 +12,7 @@ module.exports = function toReadable (number) {
   } else if (number >19 && number < 100){
     return `${dozens[Math.floor(number/10)]} ${units[number%10]}`.trim()
   } else if (number >99 && number < 1000 && stringNumber[1] == 0 && stringNumber[2] == 0 ){
-    return units[number/100] + ' hundred ';    
+    return units[number/100] + ' hundred';    
   } else if (number >99 && number < 1000){
     let firstNumber = units[Math.floor(number/100)]
     let endTheNumber = Math.floor(number%100)
